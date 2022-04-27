@@ -1,0 +1,16 @@
+
+
+<nav class="navbar navbar-light bg-light justify-content-between">
+	<div class="container">
+	  <a class="navbar-brand">Navbar</a>
+
+	  <h2>{{ user }}</h2>
+
+	  {% if not user.is_authenticate %}
+	     <a class="btn btn-secondary" href="{% url 'logout' %}" title="">Logout</a>
+	  {% else %}
+	  	 <a class="btn btn-secondary" href="{% url 'login' %}" title="">Login</a>
+	  {% endif %}
+	    
+	</div>
+</nav>
